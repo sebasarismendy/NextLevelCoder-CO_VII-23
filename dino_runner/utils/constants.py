@@ -2,7 +2,7 @@ import pygame
 import os
 
 # Global Constants
-TITLE = "Queloke Mama Wuevo"
+TITLE = "dino Space"
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 FPS = 30
@@ -66,6 +66,8 @@ SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
 
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
+
+CL = pygame.image.load(os.path.join(IMG_DIR, 'other/cielo.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
