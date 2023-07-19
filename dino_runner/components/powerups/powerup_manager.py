@@ -8,7 +8,7 @@ class PowerUpManager:
     def __init__(self):
         self.has_powerup = False
         self.powerup = None
-        self.next_powerup_show = 100
+        self.next_powerup_show = 10
 
     def update(self, game):
         if not self.has_powerup and game.score == self.next_powerup_show:
@@ -32,4 +32,4 @@ class PowerUpManager:
         
         font = pygame.font.Font(None, 36)
         text = font.render(f"Next Power-Up Show: {self.next_powerup_show}", True, (255, 255, 255))
-        screen.blit(text, (10, 10))
+        screen.blit(text, (10,10))

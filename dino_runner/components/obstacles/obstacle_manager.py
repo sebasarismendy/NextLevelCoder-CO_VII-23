@@ -1,6 +1,8 @@
 import pygame
 from dino_runner.components.obstacles.bird import Bird
 from dino_runner.components.obstacles.cactus import Cactus
+from dino_runner.components.obstacles.mike import Mike
+from dino_runner.components.obstacles.fireball import Fire 
 import random
 
 
@@ -26,7 +28,7 @@ class ObstacleManager:
             game.playing = False
             
     def create_obstacle(self):
-        obstacle_list = [Cactus(), Bird()]
+        obstacle_list = [Cactus(), Bird(),Mike(),Fire()]
         self.obstacle = random.choice(obstacle_list)
 
     def draw(self, screen):

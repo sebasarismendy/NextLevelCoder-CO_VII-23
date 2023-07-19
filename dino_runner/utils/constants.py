@@ -61,6 +61,11 @@ BIRD = [
     pygame.image.load(os.path.join(IMG_DIR, "Bird/Bird2.png")),
 ]
 
+fire = [
+    pygame.image.load(os.path.join(IMG_DIR, "Other/fireball1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Other/fireball2.png")),
+]
+
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
@@ -70,5 +75,7 @@ BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 CL = pygame.image.load(os.path.join(IMG_DIR, 'other/cielo.png'))
 
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
+
+Mk =  pygame.image.load(os.path.join(IMG_DIR, 'Other/mike.png'))
 
 DEFAULT_TYPE = "default"
