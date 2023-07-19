@@ -20,7 +20,7 @@ class PowerUpManager:
                 self.next_powerup_show = self.generate_next_powerup_show()
 
     def generate_next_powerup_show(self):
-        return random.randint(100, 2000)  
+        return random.randint(100, 200)  
 
     def create_powerup(self):
         self.powerup = Shield()
@@ -29,3 +29,7 @@ class PowerUpManager:
     def draw(self, screen):
         if self.has_powerup:
             self.powerup.draw(screen)
+        
+        font = pygame.font.Font(None, 36)
+        text = font.render(f"Next Power-Up Show: {self.next_powerup_show}", True, (255, 255, 255))
+        screen.blit(text, (10, 10))
