@@ -1,5 +1,5 @@
 import pygame
-
+import random
 from dino_runner.components.powerups.shield import Shield
 
 
@@ -17,6 +17,10 @@ class PowerUpManager:
             self.has_powerup = self.powerup.update(game.game_speed)
             if game.player.rect.colliderect(self.powerup.rect):
                 self.has_powerup = False
+                self.next_powerup_show = self.generate_next_powerup_show()
+
+    def generate_next_powerup_show(self):
+        return random.randint(100, 2000)  
 
     def create_powerup(self):
         self.powerup = Shield()

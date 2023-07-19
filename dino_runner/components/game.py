@@ -25,6 +25,8 @@ class Game:
         self.x_pos_bg = 0
         self.y_pos_bg = 380
         self.player = Dinosaur()
+        self.x_pos_cl = 0
+        self.y_pos_cl = -20
         self.obstacle_manager = ObstacleManager()
         self.powerup_manager = PowerUpManager()
         self.score = 0
@@ -53,7 +55,8 @@ class Game:
         self.clock.tick(FPS)
         self.screen.fill((255, 255, 255))
         self.draw_background()
-        
+        self.draw_cielo1()
+        self.player.draw(self.screen)
         self.player.draw(self.screen)
         self.obstacle_manager.draw(self.screen)
         self.powerup_manager.draw(self.screen)
@@ -80,6 +83,6 @@ class Game:
         if self.x_pos_cl <= -image_width:
             self.screen.blit(CL, (image_width + self.x_pos_cl, self.y_pos_cl))
             self.x_pos_cl = 0
-        self.x_pos_cl -= self.game_speed
+        self.x_pos_cl -= self.game_speed 
         
         

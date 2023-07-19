@@ -13,6 +13,7 @@ class ObstacleManager:
     def update(self, game):
         if not self.has_obstacle:
             self.create_obstacle()
+            
         if self.obstacle.rect.x > 0:
             self.has_obstacle = True
        
@@ -23,7 +24,7 @@ class ObstacleManager:
         if game.player.rect.colliderect(self.obstacle.rect):
             pygame.time.delay(400)
             game.playing = False
-
+            
     def create_obstacle(self):
         obstacle_list = [Cactus(), Bird()]
         self.obstacle = random.choice(obstacle_list)
