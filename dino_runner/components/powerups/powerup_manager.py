@@ -2,6 +2,7 @@ import pygame
 import random
 from dino_runner.components.powerups.shield import Shield
 from dino_runner.components.powerups.robotdino import Robotdino
+from dino_runner.utils.constants import POWER_ROBOT_TYPE
 
 
 class PowerUpManager:
@@ -9,8 +10,8 @@ class PowerUpManager:
     def __init__(self):
         self.has_powerup = False
         self.powerup = None
-        self.next_powerup_show = 10
-
+        self.next_powerup_show = 100
+        
     def update(self, game):
         if not self.has_powerup and game.score == self.next_powerup_show:
             self.create_powerup()
@@ -19,13 +20,17 @@ class PowerUpManager:
             if game.player.rect.colliderect(self.powerup.rect):
                 self.has_powerup = False
                 game.player.type = self.powerup.type
+                
+                if self.powerup.type == POWER_ROBOT_TYPE:
+                   print(self.powerup.type)
+                   game.game_speed = 60
                 self.next_powerup_show = self.generate_next_powerup_show()
 
     def generate_next_powerup_show(self):
         return random.randint(100, 200)  
 
     def create_powerup(self):
-        powerups = [Shield(),Robotdino()]
+        powerups = [Shield(), Robotdino()]
         self.powerup = random.choice(powerups)
         self.has_powerup = True
 

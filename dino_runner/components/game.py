@@ -30,6 +30,7 @@ class Game:
         self.obstacle_manager = ObstacleManager()
         self.powerup_manager = PowerUpManager()
         self.score = 0
+        
 
     def run(self):
         # Game loop: events - update - draw

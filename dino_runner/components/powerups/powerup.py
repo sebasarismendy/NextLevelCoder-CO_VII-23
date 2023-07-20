@@ -1,6 +1,7 @@
 import random
 from pygame.sprite import Sprite
 from dino_runner.utils.constants import DEFAULT_TYPE, SCREEN_WIDTH
+from dino_runner.utils.constants import POWER_ROBOT_TYPE
 
 class PowerUp(Sprite):
     def __init__(self, image):

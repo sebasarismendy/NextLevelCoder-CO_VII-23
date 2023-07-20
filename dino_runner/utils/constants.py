@@ -2,11 +2,14 @@ import pygame
 import os
 
 # Global Constants
+pygame.init()
+pygame.mixer.init()
 TITLE = "dino Space"
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
+
 
 # Assets Constants
 ICON = pygame.image.load(os.path.join(IMG_DIR, "DinoWallpaper.png"))
@@ -88,6 +91,8 @@ CL = pygame.image.load(os.path.join(IMG_DIR, 'other/cielo.png'))
 HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 
 Mk =  pygame.image.load(os.path.join(IMG_DIR, 'Other/mike.png'))
+
+SL_SOUND = pygame.mixer.Sound(os.path.join(IMG_DIR, 'Other/salto.wav'))
 
 DEFAULT_TYPE = "default"
 SHIELD_TYPE = "shield"
