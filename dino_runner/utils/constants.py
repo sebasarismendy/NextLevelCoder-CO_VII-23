@@ -26,9 +26,15 @@ RUNNING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoRun2.png")),
 ]
 
+POWER_ROBOT_RUN = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/powerrun1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/powerrun2.png")),
+]
+
 JUMPING = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJump.png"))
 JUMPING_SHIELD = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpShield.png"))
 JUMPING_HAMMER = pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoJumpHammer.png"))
+POWER_ROBOT_JUMP = pygame.image.load(os.path.join(IMG_DIR, "Dino/powerjump.png"))
 
 DUCKING = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1.png")),
@@ -43,6 +49,10 @@ DUCKING_SHIELD = [
 DUCKING_HAMMER = [
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck1Hammer.png")),
     pygame.image.load(os.path.join(IMG_DIR, "Dino/DinoDuck2.png")),
+]
+POWER_ROBOT_DUCK = [
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/powerduck1.png")),
+    pygame.image.load(os.path.join(IMG_DIR, "Dino/powerduck2.png")),
 ]
 
 SMALL_CACTUS = [
@@ -69,6 +79,7 @@ fire = [
 CLOUD = pygame.image.load(os.path.join(IMG_DIR, 'Other/Cloud.png'))
 SHIELD = pygame.image.load(os.path.join(IMG_DIR, 'Other/shield.png'))
 HAMMER = pygame.image.load(os.path.join(IMG_DIR, 'Other/hammer.png'))
+POWER_ROBOT = pygame.image.load(os.path.join(IMG_DIR, 'other/robot.png'))
 
 BG = pygame.image.load(os.path.join(IMG_DIR, 'Other/Track.png'))
 
@@ -79,3 +90,6 @@ HEART = pygame.image.load(os.path.join(IMG_DIR, 'Other/SmallHeart.png'))
 Mk =  pygame.image.load(os.path.join(IMG_DIR, 'Other/mike.png'))
 
 DEFAULT_TYPE = "default"
+SHIELD_TYPE = "shield"
+POWER_ROBOT_TYPE = "power_robot"
+

@@ -11,4 +11,4 @@ class Bird (Obstacle):
     def update(self, game_speed):
         self.rect.x -= game_speed
         self.counter += 1
-        self.image = BIRD[0] if self.counter %4 else BIRD[1] 
+        self.image = BIRD[0] if self.counter %2.5 else BIRD[1] 

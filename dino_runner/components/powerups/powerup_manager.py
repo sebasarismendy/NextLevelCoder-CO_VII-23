@@ -1,6 +1,7 @@
 import pygame
 import random
 from dino_runner.components.powerups.shield import Shield
+from dino_runner.components.powerups.robotdino import Robotdino
 
 
 class PowerUpManager:
@@ -17,19 +18,21 @@ class PowerUpManager:
             self.has_powerup = self.powerup.update(game.game_speed)
             if game.player.rect.colliderect(self.powerup.rect):
                 self.has_powerup = False
+                game.player.type = self.powerup.type
                 self.next_powerup_show = self.generate_next_powerup_show()
 
     def generate_next_powerup_show(self):
         return random.randint(100, 200)  
 
     def create_powerup(self):
-        self.powerup = Shield()
+        powerups = [Shield(),Robotdino()]
+        self.powerup = random.choice(powerups)
         self.has_powerup = True
 
     def draw(self, screen):
         if self.has_powerup:
             self.powerup.draw(screen)
         
-        font = pygame.font.Font(None, 36)
+        font = pygame.font.Font(None, 50)
         text = font.render(f"Next Power-Up Show: {self.next_powerup_show}", True, (255, 255, 255))
         screen.blit(text, (10,10))
